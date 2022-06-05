@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Modal Vanilla Javascript</title>
+</head>
+<body class="background" onkeydown="ESCclose(event)">
+   
+    <div class="app">
+        
+        <div class="btn">
+        <button class="js-btn">Open Modal</button>
+        </div>
+        
+        <div class="modal_blocker">
+        </div>
+
+        <div class="modal">
+        <div class="modal_content">
+        <div class="modal_header">
+            <h1>Header Modal</h1>
+            <span class="close">&times;</span>
+
+        </div>
+        <div class="modal_body">
+            <p class="modal_body_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, deserunt nostrum! Aliquam error eius obcaecati fugiat dicta rerum? Id, reprehenderit aliquam, possimus totam atque pariatur velit optio eum ab sint ratione incidunt nam sed expedita, labore officiis praesentium. Quia at reprehenderit magni soluta suscipit! Quaerat obcaecati iure error esse fuga omnis repellat rem numquam minima magnam, laborum quia impedit culpa! Reprehenderit voluptas magni voluptatum sequi itaque odio saepe nesciunt, reiciendis corporis hic perferendis sint delectus est obcaecati architecto, temporibus quidem in ea! Doloribus ipsam explicabo optio aspernatur, voluptatum ullam dolor ea assumenda architecto aliquam dolorem quis libero maiores neque veniam, vitae nemo doloremque. Asperiores sequi voluptates minima distinctio quis et non dolorem error harum dolores autem animi aliquid sapiente, qui placeat, odit, repellendus iusto eius nostrum voluptas fugiat atque quaerat accusamus velit? Ipsa iste, reprehenderit harum earum placeat non beatae porro iusto veritatis atque pariatur? Doloremque placeat a, aut iusto aliquid eum beatae recusandae commodi voluptatibus ex non enim, nesciunt eaque autem quidem saepe sit. Minima sint placeat commodi itaque eveniet iure debitis pariatur nemo.</p>
+        </div>
+        <div class="modal_footer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam.</p>
+        </div>
+        </div>
+        </div>
+
+    </div>
+
+<script>
+            
+    const outside = document.querySelector(".modal_blocker")
+    const the_button = document.querySelector(".js-btn")
+    const closeBtn = document.querySelector(".close")
+    const modal = document.querySelector(".modal")
+    const body = document.body
+
+    document.addEventListener("DOMContentLoaded",() => {
+        the_button.addEventListener("click", handleClick)
+    })
+
+    function closeModal(){
+        outside.style.display = "none";
+        modal.style.display = "none"
+    }
+
+    function handleClick(event) {
+        modal.style.display = "flex";
+        outside.style.display = "block";
+        closeBtn.addEventListener("click", () => {
+        closeModal()
+    })
+    }
+    outside.addEventListener("click", () => {
+        closeModal()
+    })
+    
+    function ESCclose(evt) {
+        if (evt.keyCode == 27) {
+        closeModal()
+        }
+    }
+
+</script>
+
+</body>
+</html>

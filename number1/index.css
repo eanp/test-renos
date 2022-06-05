@@ -1,0 +1,146 @@
+html {
+height: 100%;
+}
+
+body {
+height: 100%;
+margin: 0;
+background-repeat: no-repeat;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+.background {
+background-image: linear-gradient(to right top, #89abe0, #87c6e0, #aadad9, #d7eadf, #fafbf7);
+}
+
+.btn {
+text-align: center;
+zoom: 1.5;
+}
+
+button {
+border-radius: 4px;
+background-color: skyblue;
+border: none;
+color: #ffffff;
+padding-inline: 20px;
+padding-block: 10px;
+}
+
+button:hover {
+background-color: salmon;
+cursor: pointer;
+}
+
+.modal {
+display: none;
+align-items: center;
+justify-content: center;
+position: fixed;
+top: 50vh;
+left: 50vw;
+transform: translate(-50%, -50%);
+}
+
+.modal_blocker {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(0,0,0,.5);
+cursor: pointer;
+}
+
+.modal_content {
+background-color: white;
+position: flex;
+padding-inline: 24px;
+border-radius: 8px;
+border: 2px solid skyblue;
+align-self: center;
+
+}
+
+.close {
+color: Black;
+font-size: 40px;
+}
+
+.close:hover {
+color: white;
+cursor: pointer;
+border-radius: 4px;
+background-color: salmon;
+height: 24px;
+width: 24px;
+font-size: 35px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0px;
+}
+
+.modal_header {
+display: flex;
+background-color: #f1f1f1;
+justify-content: space-between;
+width:  96%;
+margin-top: 12px;
+flex-direction: row;
+padding-inline: 8px;
+align-items: center;
+height: 20px;
+padding-top: 8px;
+padding-bottom: 24px;
+border-bottom: 2px solid skyblue;
+}
+
+.modal_body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 96%;
+height: 100%;
+margin-top: 24px;
+overflow-y: auto;
+max-height: 300px;
+overflow-x:hidden;
+padding-right: 24px;
+margin-right: 24px ;
+}
+
+.modal_footer {
+margin-top: 24px;
+padding-inline: 8px;
+padding-top: 2px;
+margin-bottom: 24px;
+border-top: 2px solid skyblue;
+}
+
+.modal_body_text {
+margin-top: 24px;
+}
+
+::-webkit-scrollbar {
+width: 16px;
+right: 24px;
+}
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px skyblue; 
+border-radius: 10px;
+}
+   
+::-webkit-scrollbar-thumb {
+background: skyblue; 
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: salmon; 
+}
